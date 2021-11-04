@@ -14,20 +14,14 @@
       <slot />
     </main>
 
-    <footer class="text-center mb-8">
-      <span class="text-sm text-gray-700">
-        Made with Love by
-        <a href="https://twitter.com/damasdev" class=" font-semibold">
-          @damasdev
-        </a>
-      </span>
-    </footer>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Logo from "~/components/Logo.vue";
 import ToggleTheme from "~/components/ToggleTheme.vue";
+import Footer from "~/components/Footer.vue";
 
 export default {
   props: {
@@ -36,6 +30,7 @@ export default {
   components: {
     Logo,
     ToggleTheme,
+    Footer,
   },
 };
 </script>
@@ -61,10 +56,5 @@ export default {
     position: sticky;
     width: 100%;
   }
-}
-
-.main {
-  margin: 0 auto;
-  padding: 1.5vw 15px 0;
 }
 </style>

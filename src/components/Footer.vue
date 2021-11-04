@@ -1,0 +1,314 @@
+<template>
+  <div>
+    <div class="bg-blue-700">
+      <div class="container mx-auto py-3 px-5">
+        <div class="flex items-center justify-between flex-wrap text-sm">
+          <div class="w-0 flex-1 flex items-center">
+            <span class="p-2 rounded-lg bg-blue-800 hidden sm:flex">
+              <svg
+                class="h-6 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                />
+              </svg>
+            </span>
+            <div class="ml-3 font-medium text-white truncate">
+              <span class="md:hidden">
+                Donasi
+              </span>
+              <span class="hidden md:inline">
+                Dukung kami untuk terus menyediakan konten berkualitas
+              </span>
+            </div>
+          </div>
+          <div
+            class="order-3 my-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
+          >
+            <div class="rounded-md shadow-sm">
+              <a
+                href="https://trakteer.id/kodedasar"
+                alt="Donasi"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex text-xs uppercase items-center justify-center px-4 py-2 border border-transparent leading-5 font-medium rounded-md text-blue-600 bg-white hover:text-blue-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-150"
+              >
+                Kirim Donasi
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-gray-900 pb-14 md:pb-0">
+      <div class="container mx-auto py-5 md:py-10">
+        <div class="text-gray-400 flex flex-wrap justify-center">
+          <div class="p-5 w-full md:w-2/3 space-y-10">
+            <div>
+              <div class="text-xs uppercase text-gray-200 font-medium mb-4">
+                Tentang Kami
+              </div>
+              <p class="text-sm">
+                Misi kami adalah menyebarkan manfaat keseluruh masyarakat
+                Indonesia dengan menghadirkan informasi di bidang pemrograman
+                dan teknologi.
+              </p>
+            </div>
+            <div>
+              <div class="text-xs uppercase text-gray-200 font-medium mb-4">
+                Media Partner
+              </div>
+              <p class="mb-3 text-sm">
+                Kami bekerjasama dengan situs-situs yang mempunyai tujuan sama:
+              </p>
+              <div>
+                <a href="https://kodingin.com" rel="noreferrer" target="_blank">
+                  <span
+                    class="text-xs leading-10 bg-transparent hover:text-gray-200 py-2 px-4 mr-1 border hover:border-gray-200 border-gray-400 text-gray-400 rounded-full"
+                  >
+                    Kodingin
+                  </span>
+                </a>
+                <a
+                  href="https://musaamin.web.id"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <span
+                    class="text-xs leading-10 bg-transparent hover:text-gray-200 py-2 px-4 mr-1 border hover:border-gray-200 border-gray-400 text-gray-400 rounded-full"
+                  >
+                    Musa Amin
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="text-xs uppercase text-gray-200 font-medium mb-4">
+                Hubungi Kami
+              </div>
+              <p class="text-sm mb-2">
+                <span class="flex">
+                  <a
+                    href="mailto:damasamirulkarim@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="flex items-center">
+                      <svg
+                        class="w-5 h-5 mr-2"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 22 22"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                        ></path>
+                      </svg>
+                      <span class="text-sm">damasamirulkarim@gmail.com</span>
+                    </span>
+                  </a>
+                </span>
+              </p>
+              <p class="text-sm mb-2">
+                <span class="flex">
+                  <a
+                    href="https://wa.me/6281575768529"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="flex items-center">
+                      <svg
+                        class="w-5 h-5 mr-2"
+                        role="img"
+                        viewBox="-4 0 28 28"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                        ></path>
+                      </svg>
+                      <span class="text-sm">0815-7576-8529 (Whatsapp)</span>
+                    </span>
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+          <div class="p-5 w-full md:w-1/3 space-y-10">
+            <div class="flex justify-between">
+              <div>
+                <div class="text-xs uppercase text-gray-200 font-medium mb-4">
+                  Produk
+                </div>
+                <a href="#" alt="Konten Artikel">
+                  <span
+                    class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
+                  >
+                    Artikel
+                  </span>
+                </a>
+                <a href="#" alt="Konten Video">
+                  <span
+                    class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
+                  >
+                    Video
+                  </span>
+                </a>
+              </div>
+              <div>
+                <div class="text-xs uppercase text-gray-200 font-medium mb-4">
+                  Sponsor
+                </div>
+                <a
+                  href="#"
+                  alt="Donasi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span
+                    class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
+                  >
+                    Anda
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div>
+              <div class="text-xs uppercase text-gray-200 font-medium mb-4">
+                Layanan
+              </div>
+              <a href="#" alt="Kontributor">
+                <span
+                  class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
+                >
+                  Kontributor
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container px-5 mx-auto">
+        <div
+          class="flex items-center border-t border-gray-800 text-gray-400 text-sm flex-col md:flex-row py-6"
+        >
+          <div class="flex items-center">
+            <svg
+              class="w-5 h-5 mr-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+              ></path>
+            </svg>
+            Dibuat dengan Cinta di Magelang
+          </div>
+          <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+            <a
+              href="https://twitter.com/damasdev"
+              rel="noreferrer"
+              target="_blank"
+              alt="Twitter"
+              class="w-6 mx-1"
+            >
+              <svg
+                class="text-gray-400 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M15.3 5.55a2.9 2.9 0 0 0-2.9 2.847l-.028 1.575a.6.6 0 0 1-.68.583l-1.561-.212c-2.054-.28-4.022-1.226-5.91-2.799-.598 3.31.57 5.603 3.383 7.372l1.747 1.098a.6.6 0 0 1 .034.993L7.793 18.17c.947.059 1.846.017 2.592-.131 4.718-.942 7.855-4.492 7.855-10.348 0-.478-1.012-2.141-2.94-2.141zm-4.9 2.81a4.9 4.9 0 0 1 8.385-3.355c.711-.005 1.316.175 2.669-.645-.335 1.64-.5 2.352-1.214 3.331 0 7.642-4.697 11.358-9.463 12.309-3.268.652-8.02-.419-9.382-1.841.694-.054 3.514-.357 5.144-1.55C5.16 15.7-.329 12.47 3.278 3.786c1.693 1.977 3.41 3.323 5.15 4.037 1.158.475 1.442.465 1.973.538z"
+                />
+              </svg>
+              <span class="sr-only">Twitter</span>
+            </a>
+            <a
+              href="https://www.youtube.com/kodedasar"
+              rel="noreferrer"
+              target="_blank"
+              alt="Youtube"
+              class="w-6 mx-1"
+            >
+              <svg
+                class="text-gray-400 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M19.606 6.995c-.076-.298-.292-.523-.539-.592C18.63 6.28 16.5 6 12 6s-6.628.28-7.069.403c-.244.068-.46.293-.537.592C4.285 7.419 4 9.196 4 12s.285 4.58.394 5.006c.076.297.292.522.538.59C5.372 17.72 7.5 18 12 18s6.629-.28 7.069-.403c.244-.068.46-.293.537-.592C19.715 16.581 20 14.8 20 12s-.285-4.58-.394-5.005zm1.937-.497C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5v-7l6 3.5-6 3.5z"
+                />
+              </svg>
+              <span class="sr-only">Youtube</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/damasamirulkarim"
+              rel="noreferrer"
+              target="_blank"
+              alt="Linkedin"
+              class="w-6 mx-1"
+            >
+              <svg
+                class="text-gray-400 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm2.5 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-1 1h2v7.5h-2V10zm5.5.43c.584-.565 1.266-.93 2-.93 2.071 0 3.5 1.679 3.5 3.75v4.25h-2v-4.25a1.75 1.75 0 0 0-3.5 0v4.25h-2V10h2v.43z"
+                />
+              </svg>
+              <span class="sr-only">Linkedin</span>
+            </a>
+            <a
+              href="https://github.com/damasdev"
+              rel="noreferrer"
+              target="_blank"
+              alt="Github"
+              class="w-6 mx-1"
+            >
+              <svg
+                class="text-gray-400 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+              >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
+                />
+              </svg>
+              <span class="sr-only">Github</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</template>
