@@ -1,15 +1,15 @@
 <template>
   <header
-    class="flex-none relative z-50 text-sm leading-6 font-medium ring-1 ring-gray-900 ring-opacity-5 shadow-sm py-5 bg-white"
+    class="flex-none relative z-50 text-sm leading-6 font-medium ring-1 ring-gray-900 ring-opacity-5 shadow-sm py-5 bg-white dark:bg-gray-800 text-gray-600 dark:text-white"
   >
-    <nav aria-label="Global" class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center  flex-wrap sm:flex-nowrap  ">
         <div class="flex items-center truncate">
           <a href="/" class="flex-none text-gray-900">
             <span class="sr-only">kodedasar.com</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              class="h-6 w-6 text-black dark:text-white"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
@@ -21,7 +21,7 @@
             </svg>
           </a>
           <div
-            class="truncate lg:block text-sm text-gray-500 font-normal xl:border-l xl:border-gray-200 ml-3 xl:ml-4 xl:pl-4 xl:py-0.5"
+            class="truncate lg:block text-sm text-gray-500 dark:text-white font-normal xl:border-l xl:border-gray-200 ml-3 xl:ml-4 xl:pl-4 xl:py-0.5"
           >
             <span class="truncate inline font-sans text-sm font-light">
               Built By Developer, For Developer
@@ -29,7 +29,7 @@
           </div>
         </div>
         <div
-          class="w-full flex-none mt-4 sm:mt-0 sm:w-auto sm:ml-auto flex items-center pt-4 sm:pt-0 border-t border-gray-100 sm:border-none"
+          class="w-full flex-none mt-4 sm:mt-0 sm:w-auto sm:ml-auto flex items-center pt-4 sm:pt-0 border-t border-gray-100 dark:border-gray-500 sm:border-none"
         >
           <div class="flex items-center space-x-4 mr-4">
             <a
@@ -40,7 +40,7 @@
               class="flex items-center space-x-1"
             >
               <svg
-                class="text-gray-700 fill-current"
+                class="text-black dark:text-white fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="24"
@@ -61,7 +61,7 @@
               class="flex items-center space-x-1"
             >
               <svg
-                class="text-gray-700 fill-current"
+                class="text-black dark:text-white fill-current"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 width="24"

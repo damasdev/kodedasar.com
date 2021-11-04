@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-white dark:bg-gray-900">
     <Header />
 
     <main class="relative">

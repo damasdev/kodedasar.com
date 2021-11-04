@@ -47,9 +47,9 @@
         </div>
       </div>
     </div>
-    <footer class="bg-gray-900 pb-14 md:pb-0">
+    <footer class="bg-gray-900 dark:bg-gray-800 pb-14 md:pb-0">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-10">
-        <div class="text-gray-400 flex justify-center space-x-4">
+        <div class="text-gray-400 md:flex justify-center md:space-x-4">
           <div class="w-full md:w-2/3 space-y-10">
             <div>
               <div class="text-xs uppercase text-gray-200 font-medium mb-4">
@@ -92,7 +92,7 @@
               <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                 Hubungi Kami
               </div>
-              <p class="text-sm mb-2">
+              <p class="text-sm mb-4">
                 <span class="flex">
                   <a
                     href="mailto:damasamirulkarim@gmail.com"
@@ -119,7 +119,7 @@
                   </a>
                 </span>
               </p>
-              <p class="text-sm mb-2">
+              <p class="text-sm mb-4">
                 <span class="flex">
                   <a
                     href="https://wa.me/6281575768529"
@@ -146,8 +146,8 @@
             </div>
           </div>
           <div class="w-full md:w-1/3 space-y-10">
-            <div class="flex justify-between">
-              <div>
+            <div class="mt-8 md:mt-0 flex justify-between">
+              <div class="w-full">
                 <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                   Produk
                 </div>
@@ -157,14 +157,20 @@
                   -
                 </span>
               </div>
-              <div>
+              <div class="w-full">
                 <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                   Sponsor
                 </div>
                 <span
                   class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
                 >
-                  -
+                  <a
+                    href="https://scodepro.net"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span class="uppercase">scodepro.net</span>
+                  </a>
                 </span>
               </div>
             </div>

@@ -7,7 +7,11 @@
     >
       <a
         aria-label="Facebook"
-        href="https://www.facebook.com/sharer/sharer.php?u=#?utm_source=facebook&utm_medium=sharer&utm_campaign=social"
+        :href="
+          'https://www.facebook.com/sharer/sharer.php?u=' +
+            url +
+            '?utm_source=facebook&utm_medium=sharer&utm_campaign=social'
+        "
         class="cursor-pointer"
       >
         <svg
@@ -27,7 +31,7 @@
     >
       <a
         aria-label="Linkedin"
-        href="https://www.linkedin.com/shareArticle?mini=true&amp;url=#"
+        :href="'https://www.linkedin.com/shareArticle?mini=true&amp;url=' + url"
         class="cursor-pointer"
       >
         <svg class="w-6 h-6" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +46,7 @@
     >
       <a
         aria-label="Twitter"
-        href="https://twitter.com/intent/tweet?url=#"
+        :href="'https://twitter.com/intent/tweet?url=' + url"
         class="cursor-pointer"
       >
         <svg class="w-8 h-8" viewBox="0 0 512 512">
@@ -58,7 +62,7 @@
     >
       <a
         aria-label="Whastapp"
-        href="whatsapp://send?text=#"
+        :href="'whatsapp://send?text=' + url"
         class="cursor-pointer"
       >
         <svg
@@ -76,3 +80,13 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    url: function() {
+      return window.location.origin + this.$route.path;
+    },
+  },
+};
+</script>

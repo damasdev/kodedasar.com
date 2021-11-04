@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex-shrink-0 relative bg-gray-900 py-12 md:py-16 border-t border-gray-800 overflow-hidden"
+    class="flex-shrink-0 relative bg-gray-900 dark:bg-gray-700 py-12 md:py-16 border-t border-gray-800 overflow-hidden"
   >
     <svg
       class="overflow-hidden absolute bottom-0 right-0"

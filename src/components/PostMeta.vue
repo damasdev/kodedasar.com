@@ -1,5 +1,5 @@
 <template>
-  <div class="text-sm opacity-80">
+  <div class="text-sm opacity-80 text-gray-600 dark:text-gray-200">
     By {{ post.author }}
     |
     <template v-if="post.timeToRead">

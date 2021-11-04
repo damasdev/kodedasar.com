@@ -1,7 +1,9 @@
 <template>
   <Layout>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="my-14 text-4xl font-semibold mx-auto text-center">
+      <h1
+        class="my-14 text-4xl font-semibold mx-auto text-center text-gray-700 dark:text-white"
+      >
         Kategori: {{ $page.tag.title }}
       </h1>
 
@@ -48,8 +50,10 @@ export default {
   components: {
     PostCard,
   },
-  metaInfo: {
-    title: "Kategori",
+  metaInfo() {
+    return {
+      title: this.$page.tag.title,
+    };
   },
 };
 </script>
