@@ -1,6 +1,6 @@
 <template>
   <div class="text-sm opacity-80">
-    Ditulis Oleh {{ post.author }}
+    By {{ post.author }}
     |
     <template v-if="post.timeToRead">
       <strong>{{ post.timeToRead }} min read.</strong>

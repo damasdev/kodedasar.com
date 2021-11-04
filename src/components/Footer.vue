@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="bg-blue-700">
-      <div class="container mx-auto py-3 px-5">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div class="flex items-center justify-between flex-wrap text-sm">
           <div class="w-0 flex-1 flex items-center">
             <span class="p-2 rounded-lg bg-blue-800 hidden sm:flex">
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div
-            class="order-3 my-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
+            class="mb-0 order-3 my-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto"
           >
             <div class="rounded-md shadow-sm">
               <a
@@ -48,17 +48,16 @@
       </div>
     </div>
     <footer class="bg-gray-900 pb-14 md:pb-0">
-      <div class="container mx-auto py-5 md:py-10">
-        <div class="text-gray-400 flex flex-wrap justify-center">
-          <div class="p-5 w-full md:w-2/3 space-y-10">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-5 md:py-10">
+        <div class="text-gray-400 flex justify-center space-x-4">
+          <div class="w-full md:w-2/3 space-y-10">
             <div>
               <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                 Tentang Kami
               </div>
               <p class="text-sm">
                 Misi kami adalah menyebarkan manfaat keseluruh masyarakat
-                Indonesia dengan menghadirkan informasi di bidang pemrograman
-                dan teknologi.
+                Indonesia dengan menghadirkan informasi di bidang pemrograman.
               </p>
             </div>
             <div>
@@ -146,61 +145,43 @@
               </p>
             </div>
           </div>
-          <div class="p-5 w-full md:w-1/3 space-y-10">
+          <div class="w-full md:w-1/3 space-y-10">
             <div class="flex justify-between">
               <div>
                 <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                   Produk
                 </div>
-                <a href="#" alt="Konten Artikel">
-                  <span
-                    class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
-                  >
-                    Artikel
-                  </span>
-                </a>
-                <a href="#" alt="Konten Video">
-                  <span
-                    class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
-                  >
-                    Video
-                  </span>
-                </a>
+                <span
+                  class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
+                >
+                  -
+                </span>
               </div>
               <div>
                 <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                   Sponsor
                 </div>
-                <a
-                  href="#"
-                  alt="Donasi"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <span
+                  class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
                 >
-                  <span
-                    class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
-                  >
-                    Anda
-                  </span>
-                </a>
+                  -
+                </span>
               </div>
             </div>
             <div>
               <div class="text-xs uppercase text-gray-200 font-medium mb-4">
                 Layanan
               </div>
-              <a href="#" alt="Kontributor">
-                <span
-                  class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
-                >
-                  Kontributor
-                </span>
-              </a>
+              <span
+                class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
+              >
+                -
+              </span>
             </div>
           </div>
         </div>
       </div>
-      <div class="container px-5 mx-auto">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div
           class="flex items-center border-t border-gray-800 text-gray-400 text-sm flex-col md:flex-row py-6"
         >

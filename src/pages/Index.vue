@@ -1,7 +1,8 @@
 <template>
   <Layout :show-logo="false">
-    <!-- List posts -->
-    <div class="posts">
+    <Hero />
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <PostCard
         v-for="edge in $page.posts.edges"
         :key="edge.node.id"

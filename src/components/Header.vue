@@ -4,30 +4,32 @@
   >
     <nav aria-label="Global" class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center  flex-wrap sm:flex-nowrap  ">
-        <a href="/" class="flex-none text-gray-900">
-          <span class="sr-only">kodedasar.com</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-6 w-6"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+        <div class="flex items-center truncate">
+          <a href="/" class="flex-none text-gray-900">
+            <span class="sr-only">kodedasar.com</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <div
+            class="truncate lg:block text-sm text-gray-500 font-normal xl:border-l xl:border-gray-200 ml-3 xl:ml-4 xl:pl-4 xl:py-0.5"
           >
-            <path
-              fill-rule="evenodd"
-              d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </a>
-        <div
-          class="lg:block text-sm text-gray-500 font-normal xl:border-l xl:border-gray-200 ml-3 xl:ml-4 xl:pl-4 xl:py-0.5"
-        >
-          <span class="inline font-sans text-sm font-light">
-            Built By Developer, For Developer
-          </span>
+            <span class="truncate inline font-sans text-sm font-light">
+              Built By Developer, For Developer
+            </span>
+          </div>
         </div>
         <div
-          class="w-full flex-none mt-4 sm:mt-0 sm:w-auto sm:ml-auto flex items-center pt-4 md:pt-0 border-t border-gray-100 md:border-none"
+          class="w-full flex-none mt-4 sm:mt-0 sm:w-auto sm:ml-auto flex items-center pt-4 sm:pt-0 border-t border-gray-100 sm:border-none"
         >
           <div class="flex items-center space-x-4 mr-4">
             <a

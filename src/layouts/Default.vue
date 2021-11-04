@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
 
-    <main class="mt-16">
+    <main>
       <slot />
     </main>
 
