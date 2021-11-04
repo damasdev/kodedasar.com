@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
 
-    <main>
+    <main class="relative">
       <slot />
     </main>
 

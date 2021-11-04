@@ -1,12 +1,16 @@
 <template>
   <Layout>
-    <h1 class="tag-title text-center space-bottom"># {{ $page.tag.title }}</h1>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="my-14 text-4xl font-semibold mx-auto text-center">
+        Kategori: {{ $page.tag.title }}
+      </h1>
 
-    <PostCard
-      v-for="edge in $page.tag.belongsTo.edges"
-      :key="edge.node.id"
-      :post="edge.node"
-    />
+      <PostCard
+        v-for="edge in $page.tag.belongsTo.edges"
+        :key="edge.node.id"
+        :post="edge.node"
+      />
+    </div>
   </Layout>
 </template>
 
@@ -24,6 +28,11 @@ query Tag ($id: ID!) {
             timeToRead
             description
             content
+            tags {
+              id
+              title
+              path
+            }
           }
         }
       }
@@ -33,18 +42,14 @@ query Tag ($id: ID!) {
 </page-query>
 
 <script>
-import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
 
 export default {
   components: {
-    Author,
     PostCard,
   },
   metaInfo: {
-    title: "Hello, world!",
+    title: "Kategori",
   },
 };
 </script>
-
-<style lang="scss"></style>
