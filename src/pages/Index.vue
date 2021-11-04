@@ -1,8 +1,5 @@
 <template>
   <Layout :show-logo="false">
-    <!-- Hero -->
-    <Hero />
-
     <!-- List posts -->
     <div class="posts">
       <PostCard
