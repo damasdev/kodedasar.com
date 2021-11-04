@@ -7,8 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0",
-    "vue-typed-js": "^0.1.2"
+    "gridsome": "^0.7.0"
   },
   "devDependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
