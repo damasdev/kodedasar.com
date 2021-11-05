@@ -9,7 +9,7 @@
         >
           <header class="text-center my-14">
             <h1
-              class="text-4xl text-gray-800 dark:text-white mb-2 font-semibold"
+              class="text-4xl text-gray-800 dark:text-white mb-4 font-semibold"
             >
               {{ $page.post.title }}
             </h1>

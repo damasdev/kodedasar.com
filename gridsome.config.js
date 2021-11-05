@@ -9,7 +9,7 @@ module.exports = {
   siteDescription: "Built By Developer, For Developer",
 
   templates: {
-    Post: "/:title",
+    Post: "/blog/:path",
     Tag: "/tag/:id",
   },
 
@@ -19,7 +19,9 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         typeName: "Post",
-        path: "content/posts/*.md",
+        baseDir: "./content/artikel",
+        pathPrefix: "/",
+        path: "*.md",
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
@@ -32,7 +34,7 @@ module.exports = {
     {
       use: "@gridsome/plugin-google-analytics",
       options: {
-        id: "UA-XXXXXXXXX-X",
+        id: "UA-116905483-1",
       },
     },
     {

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-100 rounded-lg overflow-hidden p-6 relative mb-8">
+  <div class="bg-white dark:bg-gray-100 rounded-lg overflow-hidden p-6 relative">
     <div class="-ml-6 -mr-6 -mt-6 mb-6">
       <g-image
         :alt="post.title"
@@ -16,7 +16,7 @@
 
       <PostMeta class="text-xs text-gray-600 mb-4 dark:text-gray-900" :post="post" />
 
-      <p class="text-sm truncate" v-html="post.description" />
+      <p class="text-sm" v-html="post.description" />
 
       <PostTags class="mt-4" :post="post" />
 
