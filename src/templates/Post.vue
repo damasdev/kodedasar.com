@@ -77,13 +77,25 @@ export default {
     PostTags,
   },
   metaInfo() {
+    const pathUrl = `${this.$static.metadata.siteUrl}${this.$route.path}`;
     return {
       title: this.$page.post.title,
+      link: [{ rel: "canonical", href: pathUrl }],
       meta: [
-        {
-          name: "description",
-          content: this.$page.post.description,
-        },
+        { name: "description", content: this.$page.post.description },
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: this.$page.post.title },
+        { name: "twitter:description", content: tthis.$page.post.description },
+        { name: "twitter:site", content: "@damasdev" },
+        { name: "twitter:creator", content: "@damasdev" },
+        { name: "twitter:image", content: this.ogImageUrl },
+        // Facebook
+        { property: "og:type", content: "article" },
+        { property: "og:title", content: this.$page.post.title },
+        { property: "og:description", cotent: this.$page.post.description },
+        { property: "og:image", content: this.$page.post.cover_image || "" },
+        { property: "og:url", content: pathUrl },
       ],
     };
   },

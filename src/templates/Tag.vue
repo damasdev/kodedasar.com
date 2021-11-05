@@ -7,7 +7,7 @@
         Kategori: {{ $page.tag.title }}
       </h1>
 
-      <div class="grid grid-cols-2 gap-10 mb-16">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
         <PostCard
           v-for="edge in $page.tag.belongsTo.edges"
           :key="edge.node.id"

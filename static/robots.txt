@@ -1,0 +1,4 @@
+sitemap: https://kodedasar.com/sitemap.xml
+
+User-agent: *
+Disallow: /tag/

@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: "kodedasar.com",
+  siteUrl: "https://kodedasar.com",
   siteDescription: "Built By Developer, For Developer",
 
   templates: {
@@ -27,6 +28,21 @@ module.exports = {
           tags: {
             typeName: "Tag",
             create: true,
+          },
+        },
+      },
+    },
+    {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        config: {
+          "/blog/*": {
+            changefreq: "weekly",
+            priority: 0.5,
+          },
+          "/": {
+            changefreq: "monthly",
+            priority: 0.7,
           },
         },
       },
@@ -54,7 +70,7 @@ module.exports = {
       externalLinksTarget: "_blank",
       externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       anchorClassName: "icon icon-link",
-      plugins: ["@gridsome/remark-prismjs"],
+      plugins: ["@gridsome/remark-prismjs", "remark-toc"],
     },
   },
 };
