@@ -1,6 +1,8 @@
 <template>
   <Layout class="bg-gray-200">
-    <Hero />
+    <LazyHydrate when-visible>
+      <Hero />
+    </LazyHydrate>
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 my-16">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -49,13 +51,14 @@ query($page: Int) {
 </page-query>
 
 <script>
-import Hero from "~/components/Hero.vue";
+import LazyHydrate from "vue-lazy-hydration";
 import PostCard from "~/components/PostCard.vue";
 import { Pager } from "gridsome";
 
 export default {
   components: {
-    Hero,
+    LazyHydrate,
+    Hero: () => import("~/components/Hero.vue"),
     PostCard,
     Pager,
   },

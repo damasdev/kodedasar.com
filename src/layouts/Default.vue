@@ -1,27 +1,31 @@
 <template>
   <div id="app" class="bg-white dark:bg-gray-900">
-    <Header />
+    <LazyHydrate when-visible>
+      <Header />
+    </LazyHydrate>
 
     <main class="relative">
       <slot />
     </main>
 
-    <Share />
+    <LazyHydrate when-visible>
+      <Share />
+    </LazyHydrate>
 
-    <Footer />
+    <LazyHydrate when-visible>
+      <Footer />
+    </LazyHydrate>
   </div>
 </template>
 
 <script>
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
-import Share from "~/components/Share.vue";
-
+import LazyHydrate from "vue-lazy-hydration";
 export default {
   components: {
-    Header,
-    Footer,
-    Share,
+    LazyHydrate,
+    Header: () => import("~/components/Header.vue"),
+    Footer: () => import("~/components/Footer.vue"),
+    Share: () => import("~/components/Share.vue"),
   },
 };
 </script>
