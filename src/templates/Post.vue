@@ -14,9 +14,7 @@
               {{ $page.post.title }}
             </h1>
 
-            <LazyHydrate when-visible>
-              <PostMeta :post="$page.post" class="mb-14" />
-            </LazyHydrate>
+            <PostMeta :post="$page.post" class="mb-14" />
 
             <g-image
               :alt="$page.post.title"
@@ -59,9 +57,7 @@
                     Tags
                   </h2>
                   <div class="mt-2">
-                    <LazyHydrate when-visible>
-                      <PostTags :post="$page.post" />
-                    </LazyHydrate>
+                    <PostTags :post="$page.post" />
                   </div>
                 </div>
               </div>
@@ -74,13 +70,13 @@
 </template>
 
 <script>
-import LazyHydrate from "vue-lazy-hydration";
+import PostMeta from "~/components/PostMeta";
+import PostTags from "~/components/PostTags";
 
 export default {
   components: {
-    LazyHydrate,
-    PostMeta: () => import("~/components/PostMeta"),
-    PostTags: () => import("~/components/PostTags"),
+    PostMeta,
+    PostTags,
   },
   metaInfo() {
     const pathUrl = `https://kodedasar.com${this.$route.path}`;
