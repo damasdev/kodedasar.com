@@ -7,8 +7,7 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "gridsome": "^0.7.0",
-    "vue-lazy-hydration": "^2.0.0-beta.4"
+    "gridsome": "^0.7.0"
   },
   "devDependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",

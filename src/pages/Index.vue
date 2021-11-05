@@ -49,14 +49,12 @@ query($page: Int) {
 </page-query>
 
 <script>
-import Hero from "~/components/Hero.vue";
-import PostCard from "~/components/PostCard.vue";
 import { Pager } from "gridsome";
 
 export default {
   components: {
-    Hero,
-    PostCard,
+    Hero: () => import("~/components/Hero"),
+    PostCard : () => import("~/components/PostCard"),
     Pager,
   },
   metaInfo: {
