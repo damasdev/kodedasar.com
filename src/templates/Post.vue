@@ -77,7 +77,7 @@ export default {
     PostTags,
   },
   metaInfo() {
-    const pathUrl = `${this.$static.metadata.siteUrl}${this.$route.path}`;
+    const pathUrl = `https://kodedasar.com${this.$route.path}`;
     return {
       title: this.$page.post.title,
       link: [{ rel: "canonical", href: pathUrl }],
@@ -86,7 +86,7 @@ export default {
         // Twitter
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: this.$page.post.title },
-        { name: "twitter:description", content: tthis.$page.post.description },
+        { name: "twitter:description", content: this.$page.post.description },
         { name: "twitter:site", content: "@damasdev" },
         { name: "twitter:creator", content: "@damasdev" },
         { name: "twitter:image", content: this.ogImageUrl },

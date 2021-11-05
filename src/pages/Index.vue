@@ -61,7 +61,7 @@ export default {
   },
   metaInfo: {
     title: "Belajar Bahasa Pemrograman untuk Pemula Mulai dari Nol",
-    link: [{ rel: "canonical", href: this.$static.metadata.siteUrl }],
+    link: [{ rel: "canonical", href: "https://kodedasar.com" }],
     meta: [
       {
         name: "description",

@@ -85,7 +85,7 @@
 export default {
   computed: {
     url: function() {
-      return window.location.origin + this.$route.path;
+      return "https://kodedasar.com" + this.$route.path;
     },
   },
 };
