@@ -13,11 +13,12 @@
 </template>
 
 <script>
+import { hydrateWhenVisible } from "vue-lazy-hydration";
 export default {
   components: {
-    Header: () => import("~/components/Header.vue"),
-    Footer: () => import("~/components/Footer.vue"),
-    Share: () => import("~/components/Share.vue"),
+    Header: hydrateWhenVisible(() => import("~/components/Header")),
+    Footer: hydrateWhenVisible(() => import("~/components/Footer")),
+    Share: hydrateWhenVisible(() => import("~/components/Share")),
   },
 };
 </script>
