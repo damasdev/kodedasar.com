@@ -21,6 +21,8 @@
               class="w-full object-cover rounded-lg border-2 border-gray-900 dark:border-white"
               v-if="$page.post.cover_image"
               :src="$page.post.cover_image"
+              width="600"
+              height="300"
             />
           </header>
 
