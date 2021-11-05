@@ -64,47 +64,6 @@ module.exports = {
         shouldTimeTravel: false,
       },
     },
-    {
-      use: "gridsome-plugin-pwa",
-      options: {
-        title: "#KODEDASAR",
-        startUrl: "/",
-        display: "standalone",
-        statusBarStyle: "default",
-        manifestPath: "manifest.json",
-        disableServiceWorker: true,
-        serviceWorkerPath: "service-worker.js",
-        cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg",
-        shortName: "kodedasar",
-        themeColor: "#000000",
-        backgroundColor: "#FFFFFF",
-        icon: "./src/assets/images/icon.png", // must be provided like 'src/favicon.png'
-        msTileImage: "./src/assets/images/icon.png",
-        msTileColor: "#ffffff",
-      },
-    },
-    {
-      use: "gridsome-plugin-manifest",
-      options: {
-        background_color: "#FFFFFF",
-        icon_path: "./src/assets/images/icon.png",
-        name: "#KODEDASAR",
-        short_name: "kodedasar",
-        theme_color: "#000000",
-        lang: "id",
-      },
-    },
-    {
-      use: "gridsome-plugin-service-worker",
-      options: {
-        networkFirst: {
-          routes: [
-            "/",
-            /\.(js|css|png)$/, // means "every JS, CSS, and PNG images"
-          ],
-        },
-      },
-    },
   ],
 
   transformers: {
