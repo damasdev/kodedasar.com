@@ -1,70 +1,27 @@
 <template>
-  <div id="app">
-    <header class="header">
-      <div class="header__left">
-        <Logo v-if="showLogo" />
-      </div>
+  <div id="app" class="bg-white dark:bg-gray-900">
+    <Header />
 
-      <div class="header__right">
-        <ToggleTheme />
-      </div>
-    </header>
-
-    <main class="main">
+    <main class="relative">
       <slot />
     </main>
 
-    <footer class="text-center mb-8">
-      <span class="text-sm text-gray-700">
-        Made with Love by
-        <a href="https://twitter.com/damasdev" class=" font-semibold">
-          @damasdev
-        </a>
-      </span>
-    </footer>
+    <Share />
+
+    <Footer />
   </div>
 </template>
 
 <script>
-import Logo from "~/components/Logo.vue";
-import ToggleTheme from "~/components/ToggleTheme.vue";
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
+import Share from "~/components/Share.vue";
 
 export default {
-  props: {
-    showLogo: { default: true },
-  },
   components: {
-    Logo,
-    ToggleTheme,
+    Header,
+    Footer,
+    Share,
   },
 };
 </script>
-
-<style lang="scss">
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: var(--header-height);
-  padding: 0 calc(var(--space) / 2);
-  top: 0;
-  z-index: 10;
-
-  &__left,
-  &__right {
-    display: flex;
-    align-items: center;
-  }
-
-  @media screen and (min-width: 1300px) {
-    //Make header sticky for large screens
-    position: sticky;
-    width: 100%;
-  }
-}
-
-.main {
-  margin: 0 auto;
-  padding: 1.5vw 15px 0;
-}
-</style>

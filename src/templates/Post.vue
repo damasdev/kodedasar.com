@@ -1,57 +1,105 @@
 <template>
   <Layout>
-    <div class="post-title">
-      <h1 class="post-title__text">
-        {{ $page.post.title }}
-      </h1>
+    <main>
+      <div
+        class="divide-y divide-gray-200 dark:divide-gray-600 mb-10 dark:text-white"
+      >
+        <article
+          class="container mx-auto px-4 sm:px-6 lg:px-8 mb-16 divide-y divide-gray-200 dark:divide-gray-600"
+        >
+          <header class="text-center my-14">
+            <h1
+              class="text-4xl text-gray-800 dark:text-white mb-4 font-semibold"
+            >
+              {{ $page.post.title }}
+            </h1>
 
-      <PostMeta :post="$page.post" />
+            <PostMeta :post="$page.post" class="mb-14" />
 
-    </div>
+            <g-image
+              :alt="$page.post.title"
+              class="w-full object-cover rounded-lg border-2 border-gray-900 dark:border-white"
+              v-if="$page.post.cover_image"
+              :src="$page.post.cover_image"
+            />
+          </header>
 
-    <div class="post content-box">
-      <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+          <div
+            class="divide-y lg:divide-y-0 divide-gray-200 lg:grid lg:grid-cols-3 lg:gap-x-6 pt-10"
+            style="grid-template-rows: auto 1fr;"
+          >
+            <div
+              class="divide-y divide-gray-200 dark:divide-gray-600 lg:pb-0 lg:col-span-2 lg:row-span-2"
+            >
+              <div
+                class="prose font-normal max-w-none pb-8 prose-blue dark:prose-dark text-gray-800 dark:text-white"
+                v-html="$page.post.content"
+              ></div>
+              <div class="pt-8">
+                <div class="mb-4">
+                  FOOTER
+                </div>
+              </div>
+            </div>
+            <footer
+              class="text-sm font-medium leading-5 divide-y divide-gray-200 dark:divide-gray-600 lg:col-start-3 lg:row-start-2"
+            >
+              <div class="pb-8 space-y-8">
+                <div>
+                  SIDEBAR
+                </div>
+              </div>
+              <div class="sticky top-0 space-y-8 pt-8">
+                <div>
+                  <h2 class="uppercase">
+                    Tags
+                  </h2>
+                  <div class="mt-2">
+                    <PostTags :post="$page.post" />
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </article>
       </div>
-
-      <div class="post__content" v-html="$page.post.content" />
-
-      <div class="post__footer">
-        <PostTags :post="$page.post" />
-      </div>
-    </div>
-
-    <div class="post-comments">
-      <!-- Add comment widgets here -->
-    </div>
-
-    <Author class="post-author" />
+    </main>
   </Layout>
 </template>
 
 <script>
-import PostMeta from '~/components/PostMeta'
-import PostTags from '~/components/PostTags'
-import Author from '~/components/Author.vue'
+import PostMeta from "~/components/PostMeta";
+import PostTags from "~/components/PostTags";
 
 export default {
   components: {
-    Author,
     PostMeta,
-    PostTags
+    PostTags,
   },
-  metaInfo () {
+  metaInfo() {
+    const pathUrl = `https://kodedasar.com${this.$route.path}`;
     return {
       title: this.$page.post.title,
+      link: [{ rel: "canonical", href: pathUrl }],
       meta: [
-        {
-          name: 'description',
-          content: this.$page.post.description
-        }
-      ]
-    }
-  }
-}
+        { name: "description", content: this.$page.post.description },
+        // Twitter
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: this.$page.post.title },
+        { name: "twitter:description", content: this.$page.post.description },
+        { name: "twitter:site", content: "@damasdev" },
+        { name: "twitter:creator", content: "@damasdev" },
+        { name: "twitter:image", content: this.ogImageUrl },
+        // Facebook
+        { property: "og:type", content: "article" },
+        { property: "og:title", content: this.$page.post.title },
+        { property: "og:description", cotent: this.$page.post.description },
+        { property: "og:image", content: this.$page.post.cover_image || "" },
+        { property: "og:url", content: pathUrl },
+      ],
+    };
+  },
+};
 </script>
 
 <page-query>
@@ -59,7 +107,7 @@ query Post ($id: ID!) {
   post: post (id: $id) {
     title
     path
-    date (format: "D. MMMM YYYY")
+    author
     timeToRead
     tags {
       id
@@ -73,59 +121,8 @@ query Post ($id: ID!) {
 }
 </page-query>
 
-<style lang="scss">
-.post-title {
-  padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
-  text-align: center;
-}
-
-.post {
-
-  &__header {
-    width: calc(100% + var(--space) * 2);
-    margin-left: calc(var(--space) * -1);
-    margin-top: calc(var(--space) * -1);
-    margin-bottom: calc(var(--space) / 2);
-    overflow: hidden;
-    border-radius: var(--radius) var(--radius) 0 0;
-
-    img {
-      width: 100%;
-    }
-
-    &:empty {
-      display: none;
-    }
-  }
-
-  &__content {
-    h2:first-child {
-      margin-top: 0;
-    }
-
-    p:first-of-type {
-      font-size: 1.2em;
-      color: var(--title-color);
-    }
-
-    img {
-      width: calc(100% + var(--space) * 2);
-      margin-left: calc(var(--space) * -1);
-      display: block;
-      max-width: none;
-    }
-  }
-}
-
-.post-comments {
-  padding: calc(var(--space) / 2);
-
-  &:empty {
-    display: none;
-  }
-}
-
-.post-author {
-  margin-top: calc(var(--space) / 2);
+<style>
+.token {
+  text-shadow: none;
 }
 </style>

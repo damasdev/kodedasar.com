@@ -6,10 +6,11 @@
 
 module.exports = {
   siteName: "kodedasar.com",
+  siteUrl: "https://kodedasar.com",
   siteDescription: "Built By Developer, For Developer",
 
   templates: {
-    Post: "/:title",
+    Post: "/blog/:path",
     Tag: "/tag/:id",
   },
 
@@ -19,7 +20,9 @@ module.exports = {
       use: "@gridsome/source-filesystem",
       options: {
         typeName: "Post",
-        path: "content/posts/*.md",
+        baseDir: "./content/artikel",
+        pathPrefix: "/",
+        path: "*.md",
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
@@ -30,9 +33,26 @@ module.exports = {
       },
     },
     {
+      use: "@gridsome/plugin-sitemap",
+      options: {
+        cacheTime: 600000, // default
+        exclude: ["/tag/*"],
+        config: {
+          "/blog/*": {
+            changefreq: "weekly",
+            priority: 0.5,
+          },
+          "/": {
+            changefreq: "monthly",
+            priority: 0.7,
+          },
+        },
+      },
+    },
+    {
       use: "@gridsome/plugin-google-analytics",
       options: {
-        id: "UA-XXXXXXXXX-X",
+        id: "UA-116905483-1",
       },
     },
     {
@@ -44,6 +64,47 @@ module.exports = {
         shouldTimeTravel: false,
       },
     },
+    {
+      use: "gridsome-plugin-pwa",
+      options: {
+        title: "#KODEDASAR",
+        startUrl: "/",
+        display: "standalone",
+        statusBarStyle: "default",
+        manifestPath: "manifest.json",
+        disableServiceWorker: true,
+        serviceWorkerPath: "service-worker.js",
+        cachedFileTypes: "js,json,css,html,png,jpg,jpeg,svg",
+        shortName: "kodedasar",
+        themeColor: "#000000",
+        backgroundColor: "#FFFFFF",
+        icon: "./src/assets/images/icon.png", // must be provided like 'src/favicon.png'
+        msTileImage: "./src/assets/images/icon.png",
+        msTileColor: "#ffffff",
+      },
+    },
+    {
+      use: "gridsome-plugin-manifest",
+      options: {
+        background_color: "#FFFFFF",
+        icon_path: "./src/assets/images/icon.png",
+        name: "#KODEDASAR",
+        short_name: "kodedasar",
+        theme_color: "#000000",
+        lang: "id",
+      },
+    },
+    {
+      use: "gridsome-plugin-service-worker",
+      options: {
+        networkFirst: {
+          routes: [
+            "/",
+            /\.(js|css|png)$/, // means "every JS, CSS, and PNG images"
+          ],
+        },
+      },
+    },
   ],
 
   transformers: {
@@ -52,7 +113,7 @@ module.exports = {
       externalLinksTarget: "_blank",
       externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       anchorClassName: "icon icon-link",
-      plugins: ["@gridsome/remark-prismjs"],
+      plugins: ["@gridsome/remark-prismjs", "remark-toc"],
     },
   },
 };

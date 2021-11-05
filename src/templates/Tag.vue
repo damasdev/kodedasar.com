@@ -1,11 +1,19 @@
 <template>
-  <Layout>
-    <h1 class="tag-title text-center space-bottom">
-      # {{ $page.tag.title }}
-    </h1>
+  <Layout class="bg-gray-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <h1
+        class="my-14 text-4xl font-semibold mx-auto text-center text-gray-700 dark:text-white"
+      >
+        Kategori: {{ $page.tag.title }}
+      </h1>
 
-    <div class="posts">
-      <PostCard v-for="edge in $page.tag.belongsTo.edges" :key="edge.node.id" :post="edge.node"/>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mb-16">
+        <PostCard
+          v-for="edge in $page.tag.belongsTo.edges"
+          :key="edge.node.id"
+          :post="edge.node"
+        />
+      </div>
     </div>
   </Layout>
 </template>
@@ -20,10 +28,16 @@ query Tag ($id: ID!) {
           ...on Post {
             title
             path
-            date (format: "D. MMMM YYYY")
+            author
             timeToRead
             description
+            cover_image (width: 770, height: 380, blur: 10)
             content
+            tags {
+              id
+              title
+              path
+            }
           }
         }
       }
@@ -33,21 +47,16 @@ query Tag ($id: ID!) {
 </page-query>
 
 <script>
-import Author from '~/components/Author.vue'
-import PostCard from '~/components/PostCard.vue'
+import PostCard from "~/components/PostCard.vue";
 
 export default {
   components: {
-    Author,
-    PostCard
+    PostCard,
   },
-  metaInfo: {
-    title: 'Hello, world!'
-  }
-}
+  metaInfo() {
+    return {
+      title: this.$page.tag.title,
+    };
+  },
+};
 </script>
-
-<style lang="scss">
-
-</style>
-
