@@ -5,12 +5,28 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
-
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
-  })
-}
+module.exports = function(api) {
+  api.chainWebpack((config, { isClient, isProd }) => {
+    // modify config here
+    if (isProd && isClient) {
+      config.optimization.splitChunks({
+        chunks: "initial",
+        maxInitialRequests: Infinity,
+        cacheGroups: {
+          vueVendor: {
+            test: /[\\/]node_modules[\\/](vue|vuex|vue-router)[\\/]/,
+            name: "vue-vendors",
+          },
+          gridsome: {
+            test: /[\\/]node_modules[\\/](gridsome|vue-meta)[\\/]/,
+            name: "gridsome-vendors",
+          },
+          polyfill: {
+            test: /[\\/]node_modules[\\/]core-js[\\/]/,
+            name: "core-js",
+          },
+        },
+      });
+    }
+  });
+};

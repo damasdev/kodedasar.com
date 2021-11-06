@@ -1,9 +1,9 @@
 module.exports = {
   purge: [
-    './src/**/*.vue',
-    './src/**/*.js',
-    './src/**/*.md',
-    './src/**/*.html',
+    "./src/**/*.vue",
+    "./src/**/*.js",
+    "./src/**/*.md",
+    "./src/**/*.html",
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
@@ -31,7 +31,6 @@ module.exports = {
               pre: {
                 color: theme("colors.gray.200"),
                 backgroundColor: theme("colors.gray.800"),
-                
               },
               thead: {
                 color: theme("colors.gray.100"),
@@ -68,6 +67,5 @@ module.exports = {
       });
     },
     require("@tailwindcss/typography"),
-    require("@tailwindcss/aspect-ratio"),
   ],
 };
