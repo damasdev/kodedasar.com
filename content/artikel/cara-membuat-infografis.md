@@ -82,6 +82,24 @@ Biaya yang Anda keluarkan untuk dapat mengakses platfotm ini, kiranya juga seban
 
 Platform ini juga menyediakan beragam komponen-komponen pendukung yang dapat membuat hasil desain Anda semakin sempurna. Di antarnya ialah simbol, diagram, ikon, serta peta yang disesuakan dengan infromasi yang Anda publikasikan. 
 
+### Membuat Infografis dengan Zyro Logo Maker
+
+Zyro sendiri merupakan website builder praktis yang bisa memudahkan penggunanya dalam membuat, mengelola, bahkan mengembangkan website maupun bisnis online. 
+
+Beberapa tool yang ditawarkan adalah Zyro Business Name Generator, Logo Maker, dan AI Writer.
+
+Namun kita akan fokus pada fitur logo maker dari Zyro yang memungkinkan siapa sajauntuk mewujudkan ide kreatifnya hanya alam beberapa menit untuk mendesain logoecara gratis.
+
+Berikut adalah cara membuat logo gratis dengan Logo Maker:
+
+- Masukan nama yang ingin anda letakan pada logo
+- Pilih template yang dirancang secara profesional
+- Atur ukuran, warna dan font desain logo agar sesuai dengan brand anda
+- Logo yang sudah dibuat dapat diunduh untuk dipublikasikan atau dicetak 
+
+Silahkan <a href="https://zyro.com/id/membuat-logo-online">Cek Logo Maker Zyro</a>
+
+
 ## Menarik Kesimpulan
 
 Itulah beberapa ulasan mengenai cara membuat infografis. Bila Anda merasa belum memiliki kemampuan handal dalam desain, Anda dapat menggunakan beberapa platform online yang dapat memberikan beragam kemudahan dan mampu memberikan hasil yang menawan. Semoga informasi ini dapat memberikan manfaat. 

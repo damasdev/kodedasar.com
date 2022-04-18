@@ -34,7 +34,7 @@
           >
             <div class="rounded-md shadow-sm">
               <a
-                href="#"
+                href="https://trakteer.id/codewithdamas/tip"
                 alt="Donasi"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -73,17 +73,6 @@
                     class="text-xs leading-10 bg-transparent hover:text-gray-200 py-2 px-4 mr-1 border hover:border-gray-200 border-gray-400 text-gray-400 rounded-full"
                   >
                     Kodingin
-                  </span>
-                </a>
-                <a
-                  href="https://musaamin.web.id"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <span
-                    class="text-xs leading-10 bg-transparent hover:text-gray-200 py-2 px-4 mr-1 border hover:border-gray-200 border-gray-400 text-gray-400 rounded-full"
-                  >
-                    Musa Amin
                   </span>
                 </a>
               </div>
@@ -154,7 +143,12 @@
                 <span
                   class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
                 >
-                  -
+                  <a
+                    href="https://kodedasar.com"
+                    target="_blank"
+                  >
+                    <span class="uppercase">Artikel</span>
+                  </a>
                 </span>
               </div>
               <div class="w-full">
@@ -164,13 +158,7 @@
                 <span
                   class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
                 >
-                  <a
-                    href="https://scodepro.net"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span class="uppercase">scodepro.net</span>
-                  </a>
+                  -
                 </span>
               </div>
             </div>
