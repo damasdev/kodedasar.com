@@ -75,6 +75,13 @@
                     Kodingin
                   </span>
                 </a>
+                <a href="https://klikresi.com" target="_blank">
+                  <span
+                    class="text-xs leading-10 bg-transparent hover:text-gray-200 py-2 px-4 mr-1 border hover:border-gray-200 border-gray-400 text-gray-400 rounded-full"
+                  >
+                    Klik Resi
+                  </span>
+                </a>
               </div>
             </div>
             <div>
@@ -143,10 +150,7 @@
                 <span
                   class="mb-3 text-xs text-gray-400 hover:text-gray-400 block"
                 >
-                  <a
-                    href="https://kodedasar.com"
-                    target="_blank"
-                  >
+                  <a href="https://kodedasar.com" target="_blank">
                     <span class="uppercase">Artikel</span>
                   </a>
                 </span>
