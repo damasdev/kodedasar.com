@@ -37,17 +37,12 @@
                 class="prose font-normal max-w-none pb-8 prose-blue dark:prose-dark text-gray-800 dark:text-white"
                 v-html="$page.post.content"
               ></div>
-              <div class="pt-8">
-                <div class="mb-4">
-                  FOOTER
-                </div>
-              </div>
             </div>
             <footer
               class="text-sm font-medium leading-5 divide-y divide-gray-200 dark:divide-gray-600 lg:col-start-3 lg:row-start-2"
             >
               <div class="pb-8 space-y-8">
-                <div>
+                <div class="pt-8 lg:pt-0">
                   <h2 class="uppercase">
                     Tags
                   </h2>
