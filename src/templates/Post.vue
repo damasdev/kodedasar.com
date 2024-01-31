@@ -48,17 +48,19 @@
             >
               <div class="pb-8 space-y-8">
                 <div>
-                  SIDEBAR
-                </div>
-              </div>
-              <div class="sticky top-0 space-y-8 pt-8">
-                <div>
                   <h2 class="uppercase">
                     Tags
                   </h2>
                   <div class="mt-2">
                     <PostTags :post="$page.post" />
                   </div>
+                </div>
+              </div>
+              <div class="sticky top-0 space-y-8 pt-8">
+                <div class="rounded-md overflow-hidden">
+                  <a href="https://sko.dev/tips-belajar-coding-untuk-pemula?ref=kodedasar-com">
+                    <img src="/assets/banner/tips-belajar-coding-untuk-pemula.webp" alt="tips belajar coding untuk pemula" title="tips belajar coding untuk pemula"/>
+                  </a>
                 </div>
               </div>
             </footer>
